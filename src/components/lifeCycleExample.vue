@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="heading">This is the heading</h1>
+    <h1 id="heading">This is the heading</h1>
     <p class="below_heading">This is below heading</p>
   </div>
 </template>
@@ -8,9 +8,17 @@
 <script>
 export default {
   beforeCreate: function () {
-   let box = document.getElementsByClassName(`heading`); 
-    box[`innerHTML`][`style`][`color`] = `red`;
+ console.log(`I m mounted`);
   },
+  created: function(){
+console.log(`i m creatd`);
+  },
+  beforeMount: function(){
+    console.log(`i m beforemount`);
+  },
+  mounted: function(){
+    console.log(`i am in mounted`);
+  }
 };
 </script>
 
